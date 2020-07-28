@@ -1,6 +1,6 @@
 <template>
   <div class="images">
-    <h1 class="display-4">Check out the photos of {{ $route.params.name }}</h1>
+    <h1 class="display-4">Check out the images of {{ restaurant }}</h1>
     <div id="carouselExampleControls" class="carousel slide my-4" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -42,7 +42,10 @@
 
 <script>
 export default {
-  name: 'Restaurant'
+  name: 'Images',
+  props: {
+    restaurant: String
+  }
 }
 </script>
 

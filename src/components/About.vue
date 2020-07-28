@@ -1,14 +1,17 @@
 <template>
   <div class="about">
-    <h1 class="display-4">{{ $route.params.name }}</h1>
+    <h1 class="display-4">{{ restaurant }}</h1>
     <img alt="Vue logo" class="img-fluid my-4" src="@/assets/about.svg">
-    <p class="lead mt-4">Since 2018, {{ $route.params.name }} offers variety of tea and coffee drinks from different labels. <br> Please visit our places and follow us on instagram: @{{ $route.params.name }}</p>
+    <p class="lead mt-4">Since 2018, {{ restaurant }} offers variety of tea and coffee drinks from different labels. <br> Please visit our places and follow us on instagram: @{{ restaurant }}</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Restaurant'
+  name: 'About',
+  props: {
+    restaurant: String
+  }
 }
 </script>
 

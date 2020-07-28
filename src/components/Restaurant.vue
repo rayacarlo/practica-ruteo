@@ -4,9 +4,9 @@
       <div class="col-2"></div>
       <div class="col-8">
         <router-view />
-        <router-link v-bind:to="{ path: '/' + $route.params.name }">About</router-link>
-        <router-link v-bind:to="{ path: '/' + $route.params.name + '/reviews' }">Reviews</router-link>
-        <router-link v-bind:to="{ path: '/' + $route.params.name + '/images' }">Photos</router-link>
+        <router-link :to="{name: 'about', params: {restaurant: restaurant}}">About</router-link>
+        <router-link :to="{name: 'reviews', params: {restaurant: restaurant}}">Reviews</router-link>
+        <router-link :to="{name: 'images', params: {restaurant: restaurant}}">Images</router-link>
       </div>
       <div class="col-2"></div>
     </div>
@@ -15,7 +15,10 @@
 
 <script>
 export default {
-  name: 'Restaurant'
+  name: 'Restaurant',
+  props: {
+    restaurant: String,
+  }
 }
 </script>
 

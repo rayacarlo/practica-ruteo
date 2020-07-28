@@ -3,9 +3,9 @@
     <div class="row">
       <div class="col-2"></div>
       <div class="col-8">
-        <h1 class="display-4">List of {{ $route.params.name }} shops</h1>
+        <h1 class="display-4">List of {{ categories }} shops</h1>
         <img alt="Vue logo" class="img-fluid my-4" src="@/assets/teashops.svg">
-        <p class="lead mt-4">Here is a list of {{ $route.params.name }} shops currently open in your zone</p>
+        <p class="lead mt-4">Here is a list of {{ categories }} shops currently open in your zone</p>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">Big Boba</li>
           <li class="list-group-item">Teahouse</li>
@@ -20,7 +20,10 @@
 
 <script>
 export default {
-  name: 'Categories'
+  name: 'Categories',
+  props: {
+    categories: String
+  }
 }
 </script>
 

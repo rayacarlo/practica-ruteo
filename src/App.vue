@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <nav class="navbar navbar-light bg-light">
-    <router-link v-bind:to="{ path: '/' }"><img src="@/assets/homeicon.svg" width="30" height="30" class="d-inline-block align-center mx-2" alt="" loading="lazy">Home</router-link>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <router-link :to="{ name: 'home', params: {home: 'home'} }"><img src="@/assets/homeicon.svg" width="30" height="30" class="d-inline-block align-center mx-2" alt="" loading="lazy">Home</router-link>
+    <router-link :to="{ name: 'categories', params: {categories: 'categories'} }">Categories</router-link>
+    <router-link :to="{ name: 'login', params: {login: 'login'} }">Log in</router-link>
     </nav>
     <router-view />
   </div>
@@ -10,6 +12,9 @@
 <script>
   export default {
     name: 'app',
+    props: {
+      home: String
+    }
   }
 </script>
 

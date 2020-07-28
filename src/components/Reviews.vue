@@ -1,6 +1,6 @@
 <template>
   <div class="reviews">
-    <h1 class="display-4">Check out the reviews of {{ $route.params.name }}</h1>
+    <h1 class="display-4">Check out the reviews of {{ restaurant }}</h1>
     <img alt="Vue logo" class="img-fluid my-4" src="@/assets/reviews.svg">
     <div class="card my-2">
       <div class="card-body">
@@ -23,7 +23,10 @@
 
 <script>
 export default {
-  name: 'Restaurant'
+  name: 'Reviews',
+  props: {
+    restaurant: String
+  }
 }
 </script>
 
